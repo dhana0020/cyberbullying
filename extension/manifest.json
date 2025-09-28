@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Cyberbullying Detection",
+  "version": "1.0",
+  "description": "Detects cyberbullying messages in real time",
+  "permissions": ["scripting", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
